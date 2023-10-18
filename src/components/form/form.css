@@ -1,0 +1,80 @@
+.parent{
+    width: 400px;
+    background-color: #f6f6f6;
+    border: solid 1px #eee;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 4px 5px 7px 0px #ccc;
+    padding-bottom: 80px;
+}
+form{
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+label{
+    display: block;
+    width: 100%;
+    font-family: sans-serif;
+    font-size: 15px;
+    position: relative;
+    overflow: hidden;
+}
+input{
+    width: 100%;
+    margin-bottom: 30px;
+    margin-top: 5px;
+    height: 30px;
+    border-radius: 5px;
+    outline-color: #87d1f2;
+    outline-width: 1px;
+    border: solid 1px #ccc;
+}
+
+label::before{
+    content: attr(data-error);
+    position: absolute;
+    font-size: 12px;
+    bottom: -52px;
+    left: 5px;
+    color: red;
+}
+input:focus-visible{
+    border: none;
+}
+
+a{
+    text-decoration: none;
+    display: block;
+    width: fit-content;
+    font-size: 18px;
+    padding: 10px 15px;
+    background-color: #03A9F4;
+    border-radius: 5px;
+    color: #fff;
+    font-family: sans-serif;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+    transition-duration: 0.3s;
+}
+
+
+a:hover{
+    opacity: 0.9;
+    padding: 10.5px 15.5px;
+}
+
+.disable{
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: none;
+}
